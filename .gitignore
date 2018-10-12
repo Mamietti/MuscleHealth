@@ -9,3 +9,5 @@
 /build
 /captures
 .externalNativeBuild
+myo-android-sdk-0.10.0/docs/
+myo-android-sdk-0.10.0/samples/
