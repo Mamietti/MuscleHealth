@@ -24,12 +24,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    dependencies {
+/*    dependencies {
         repositories {
             maven {
                 url '../myo-android-sdk-0.10.0/myorepository'
             }
         }
         implementation('com.thalmic:myosdk:0.10.+@aar')
-    }
+    }*/
+    implementation 'eu.darken.myolib:myolib:0.0.5'
 }
