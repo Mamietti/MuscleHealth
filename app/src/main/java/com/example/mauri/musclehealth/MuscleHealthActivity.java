@@ -2,6 +2,8 @@ package com.example.mauri.musclehealth;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -44,5 +46,29 @@ public class MuscleHealthActivity extends Activity {
                 });
             }
         });
+        Handler handler = new Handler();
+        private Runnable runnableCode = new Runnable() {
+            @Override
+            public void run() {
+                Log.d("Handlers", "Called on main thread");
+                handler.postDelayed(this, 2000);
+            }
+        };
+        handler.post(runnableCode);
+    }
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+
+        //outState.putString("theWord", theWord); // Saving the Variable theWord
+        //outState.putStringArrayList("fiveDefns", fiveDefns); // Saving the ArrayList fiveDefns
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState, PersistableBundle persistentState) {
+        super.onRestoreInstanceState(savedInstanceState, persistentState);
+
+        //theWord = savedInstanceState.getString("theWord"); // Restoring theWord
+        //fiveDefns = savedInstanceState.getStringArrayList("fiveDefns"); //Restoring fiveDefns
     }
 }

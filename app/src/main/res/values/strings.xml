@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">MuscleHealth</string>
-    <string name="button">Button</string>
+    <string name="button">Start</string>
     <string name="test_text">TEST FUNCTIONALITY</string>
 </resources>
